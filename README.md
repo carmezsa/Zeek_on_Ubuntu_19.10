@@ -2,5 +2,5 @@
 Instalación de Zeek en Ubuntu 19.10
 
 - Fuentes de informacion generales:
--- https://www.zeek.org/
--- https://holdmybeersecurity.com/2019/04/03/part-1-install-setup-zeek-pf_ring-on-ubuntu-18-04-on-proxmox-5-3-openvswitch/
+ https://www.zeek.org/
+ https://holdmybeersecurity.com/2019/04/03/part-1-install-setup-zeek-pf_ring-on-ubuntu-18-04-on-proxmox-5-3-openvswitch/
