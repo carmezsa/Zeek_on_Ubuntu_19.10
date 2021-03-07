@@ -1,0 +1,79 @@
+# Demostración caso práctico - Zeek + ELK + IntelMQ
+
+###########################################################     ZEEK
+cat /opt/zeek/etc/node.cfg
+
+lsof -i -P -n | grep zeek
+
+/opt/zeek/bin/zeekctl status
+
+/opt/zeek/bin/zeekctl top
+
+/opt/zeek/bin/zeekctl netstats
+
+/opt/zeek/bin/zeekctl peerstatus worker-1-1
+
+
+ls -la /opt/zeek/logs/current/*.log
+
+
+############################################################   FILEBEAT en ZEEK
+lsof -i -P -n | grep filebeat
+
+
+
+
+###########################################################     IntelMQ
+Páguina Web
+
+lsof -i -P -n | grep intelmq
+
+lsof -i -P -n | grep filebeat
+
+ls -la /opt/intelmq/var/lib/bots/file-output/
+
+ls -la /home/usuario/exchangefiles/
+
+###########################################################     ELK
+
+lsof -i -P -n | grep elasticsearch
+
+lsof -i -P -n | grep kibana
+
+lsof -i -P -n | grep nginx
+
+lsof -i -P -n | grep logstash
+
+tail -n 50 /var/log/elasticsearch/ClusterElkZeekService.log | grep ALERTA
+
+ls -la /home/transferencia/
+
+
+cat /etc/logstash/conf.d/11-filter-beats.conf
+
+REVISAR EL PORTAL DE KIBANA.
+- Manager > Elasticsearch > Watcher > 
+
+
+
+
+Demostración envio de solicitudes maliciosas
+nc -vn 192.168.40.146 2424
+nc -vn 78.187.122.37 443
+
+
+
+root@vm07pec4elk:/home/usuario# tail /home/transferencia/events.csv 
+78.186.26.189,malicious_IP
+189.222.245.247,malicious_IP
+78.187.122.37,malicious_IP
+37.70.131.107,malicious_IP
+210.224.65.117,malicious_IP
+203.194.46.115,malicious_IP
+42.115.105.246,malicious_IP
+201.170.181.168,malicious_IP
+67.55.249.84,malicious_IP
+88.80.195.221,malicious_IP
+
+
+
